@@ -1,0 +1,107 @@
+/* Styles for Card.jsx */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 300px; /* Fixed width for a card */
+  padding: 24px;
+  background-color: #ffffff;
+  margin: 16px; /* Space between cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --- HEADER --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.card-title-rating h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  max-width: 200px; /* Stop title from pushing logo */
+}
+
+.card-rating {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.bank-logo {
+  width: 50px;
+  height: auto;
+}
+
+/* --- BODY --- */
+.card-body {
+  text-align: center;
+}
+
+.card-image {
+  width: 80%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.read-more {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+/* --- FOOTER --- */
+.card-footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.annual-fee {
+  display: flex;
+  flex-direction: column;
+}
+
+.annual-fee span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.annual-fee strong {
+  font-size: 1rem;
+  color: #000;
+}
+
+.apply-button {
+  background-color: #1a237e; /* Dark blue from your screenshot */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+  background-color: #283593;
+}

@@ -1,0 +1,9 @@
+.card-page {
+  display: flex;
+  flex-wrap: wrap; /* Lets cards wrap to the next line */
+  justify-content: center;
+  padding: 20px;
+  /* Light purple background from your screenshot */
+  background-color: #f8f7ff; 
+  min-height: 100vh;
+}

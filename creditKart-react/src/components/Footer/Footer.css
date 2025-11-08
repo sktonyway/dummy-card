@@ -1,0 +1,16 @@
+.main-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.f-content{
+    padding: 5px 10px;
+    background-color: rgb(51, 50, 50);
+    border-radius: 8px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
