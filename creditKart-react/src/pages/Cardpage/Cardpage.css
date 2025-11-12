@@ -1,9 +1,25 @@
 .card-page {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  /* Light purple background from your screenshot */
+}
+h1.tagline {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Montserrat', 'Lato', 'Raleway', Arial, sans-serif;
+
+} 
+.card-page .header {
+  width: 100%;
+  text-align: center;
+  margin-top: 10vh;
+  word-spacing: 20px;
+}
+.card-page .cards {
+  width: 100%;
+  display: flex;
   flex-wrap: wrap; /* Lets cards wrap to the next line */
   justify-content: center;
-  padding: 20px;
-  /* Light purple background from your screenshot */
-  background-color: #f8f7ff; 
-  min-height: 100vh;
 }

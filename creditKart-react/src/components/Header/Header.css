@@ -17,6 +17,7 @@
 }
 .h-content .h-logo{
     font-family:  "Bonheur Royale", cursive;
+    text-shadow: 0 0 20px rgba(254, 252, 252, 0.3);
     font-style: normal;
     color: inherit;
     font-weight: 400;
@@ -24,9 +25,5 @@
 }
 .navs a{
     font-size: 14px;
-    color: white;
-}
-.h-logo a{
-    text-decoration: none;
-    color: white;
+    margin: 0 10px;
 }

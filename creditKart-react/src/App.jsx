@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer.jsx'
 import LandingPage from './pages/Landingpage/Landingpage.jsx';
 import CardPage from './pages/Cardpage/Cardpage.jsx'; // See? Clean.
 import './App.css';
+import CustomCursor from './components/Cursor/CustomCursor.jsx';
 
 /* This is your main Layout component.
   It renders the Header and an "Outlet", which is a
@@ -14,11 +15,12 @@ import './App.css';
 function AppLayout() {
   return (
     <div className="app-container">
+      <CustomCursor />
       <Header />
       <main>
         <Outlet /> {/* <-- 1. The "page" goes here */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

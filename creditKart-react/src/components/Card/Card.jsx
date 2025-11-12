@@ -6,7 +6,7 @@ import './Card.css'; // We'll create this next for styling
 function Card({ title, rating, cardImage, description, annualFee, bankLogo }) {
   return (
     <div className="card">
-      
+
       {/* Card Header */}
       <div className="card-header">
         <div className="card-title-rating">
@@ -18,20 +18,24 @@ function Card({ title, rating, cardImage, description, annualFee, bankLogo }) {
 
       {/* Card Body */}
       <div className="card-body">
-        <img src={cardImage} alt={title} className="card-image" />
-        <p>{description}</p>
-        <a href="#" className="read-more">Read More</a>
+        <div className="card-wrapper">
+          <img src={cardImage} alt={title} className="card-image" />
+        </div>
+        <p>{description}
+          <a href="#" className="read-more">... read more</a>
+        </p>
       </div>
 
       {/* Card Footer */}
       <div className="card-footer">
         <div className="annual-fee">
           <span>Annual Fee</span>
-          <strong>{annualFee}</strong>
+          <strong>₹{annualFee}</strong>
         </div>
+        <a href={cardImage} target='_blank' rel='noopener noreferrer'>
         <button className="apply-button">Apply Now</button>
+       </a>
       </div>
-      
     </div>
   );
 }
