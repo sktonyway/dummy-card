@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FAQs.css"; // Import CSS file
+import "./Faqs.css"; // Import CSS file
 
 function Accordion({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 // src/pages/LandingPage/LandingPage.jsx
 import React from 'react';
-import "./LandingPage.css";
+import "./Landingpage.css";
 import backgroundVideo from "../../assets/vids/intro.mp4"; // ✅ import the video
 
 

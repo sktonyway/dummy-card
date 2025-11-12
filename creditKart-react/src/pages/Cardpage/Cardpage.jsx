@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Card from '../../components/Card/Card.jsx'; 
-import './CardPage.css';
+import './Cardpage.css';
 import FAQs from '../../components/faqs/Faqs.jsx';
 
 const cardData = 
