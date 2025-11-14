@@ -32,7 +32,7 @@ function Card({ title, rating, cardImage, description, annualFee, bankLogo, appl
           <span>Annual Fee</span>
           <strong>₹{annualFee}</strong>
         </div>
-        <a href={bankLogo} target='_blank' rel='noopener noreferrer'>
+        <a href={applyLink} target='_blank' rel='noopener noreferrer'>
         <button className="apply-button">Apply Now</button>
        </a>
       </div>
