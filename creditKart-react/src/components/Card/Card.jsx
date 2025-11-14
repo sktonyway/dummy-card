@@ -3,7 +3,7 @@ import './Card.css'; // We'll create this next for styling
 
 // This is a "prop" driven component.
 // We pass in objects like { title, rating, ... } as props.
-function Card({ title, rating, cardImage, description, annualFee, bankLogo }) {
+function Card({ title, rating, cardImage, description, annualFee, bankLogo, applyLink }) {
   return (
     <div className="card">
 
@@ -32,7 +32,7 @@ function Card({ title, rating, cardImage, description, annualFee, bankLogo }) {
           <span>Annual Fee</span>
           <strong>₹{annualFee}</strong>
         </div>
-        <a href={cardImage} target='_blank' rel='noopener noreferrer'>
+        <a href={bankLogo} target='_blank' rel='noopener noreferrer'>
         <button className="apply-button">Apply Now</button>
        </a>
       </div>

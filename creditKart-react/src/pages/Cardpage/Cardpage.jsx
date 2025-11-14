@@ -4,738 +4,758 @@ import React from 'react';
 import Card from '../../components/Card/Card.jsx'; 
 import './Cardpage.css';
 import FAQs from '../../components/faqs/Faqs.jsx';
-
-const cardData = 
+const cardData =
 [
- {
-   "title": "Air India SBI Platinum Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Air-India-Platinum-front.png",
-   "rating": 4,
-   "id": "UHP82QUT3KT",
-   "description": "Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna.",
-   "annualFee": 1148
- },
- {
-   "title": "Air India SBI Signature Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Air-India-Signature-SBI-Card-349x218-02.png",
-   "rating": 4,
-   "id": "YJI74YJV2QV",
-   "description": "Curabitur consequat, lectus sit amet luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque et nunc. Quisque ornare tortor at risus. Nunc ac sem ut dolor dapibus gravida. Aliquam tincidunt, nunc ac mattis ornare, lectus ante dictum mi, ac mattis velit justo",
-   "annualFee": 1754
- },
- {
-   "title": "Apollo SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-flip/sbi-platinum-card.png",
-   "rating": 5,
-   "id": "OMW03WSE9JL",
-   "description": "urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque",
-   "annualFee": 1670
- },
- {
-   "title": "Apollo SBI Card SELECT",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/apollo-sbi-card-select/thumb-apollo-cardface-front.png",
-   "rating": 5,
-   "id": "WEJ93WHM6EQ",
-   "description": "tristique ac, eleifend vitae, erat. Vivamus nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue",
-   "annualFee": 1156
- },
- {
-   "title": "Bank of Maharashtra SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/bom-cards/bom-elite-face.png",
-   "rating": 4,
-   "id": "BYQ16KFI7FU",
-   "description": "fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada",
-   "annualFee": 1319
- },
- {
-   "title": "Bank of Maharashtra SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/bom-cards/bom-prime-face.png",
-   "rating": 4,
-   "id": "RGB68NOK4TI",
-   "description": "nunc ac mattis ornare, lectus ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere vulputate, lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu,",
-   "annualFee": 1348
- },
- {
-   "title": "Bank of Maharashtra SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/bom-cards/bom-save-face.png",
-   "rating": 4,
-   "id": "EEI19CFT0SP",
-   "description": "ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna.",
-   "annualFee": 1105
- },
- {
-   "title": "BPCL SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bpcl-plat.png",
-   "rating": 3,
-   "id": "UOC17RCC3FY",
-   "description": "eu, odio. Phasellus at augue id ante dictum cursus. Nunc mauris elit, dictum eu, eleifend nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy",
-   "annualFee": 1804
- },
- {
-   "title": "BPCL SBI Card OCTANE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/octane-front.png",
-   "rating": 4,
-   "id": "XRE14WZH2HM",
-   "description": "Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem,",
-   "annualFee": 1865
- },
- {
-   "title": "CASHBACK SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-240759_SBI_Cashback_139-x-218px-01.png",
-   "rating": 3,
-   "id": "TPS28YSS4XN",
-   "description": "ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus. Donec egestas. Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis",
-   "annualFee": 1749
- },
- {
-   "title": "Central Bank of India SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CBI%20ELITE%20Card%20Front.png",
-   "rating": 5,
-   "id": "OSV77JST6SY",
-   "description": "nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa.",
-   "annualFee": 1893
- },
- {
-   "title": "Central Bank of India SBI Card Prime",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CBI%20PRIME%20Card%20Front.png",
-   "rating": 4,
-   "id": "YXX83DTK5CF",
-   "description": "enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim",
-   "annualFee": 1501
- },
- {
-   "title": "Central Bank Of India SimplySave SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CBI%20SimplySAVE%20Card%20Front.png",
-   "rating": 4,
-   "id": "IUA58RYU5OW",
-   "description": "dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Phasellus ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque",
-   "annualFee": 1183
- },
- {
-   "title": "City Union Bank SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CUB%20PRIME%20Card%20Front.png",
-   "rating": 3,
-   "id": "LZV66GZE6DX",
-   "description": "vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec metus facilisis lorem tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis a, magna. Lorem ipsum dolor",
-   "annualFee": 1850
- },
- {
-   "title": "City Union Bank SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CUB%20SimplySAVE%20Card%20Front.png",
-   "rating": 4,
-   "id": "OYI63NMK4QW",
-   "description": "Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus",
-   "annualFee": 1009
- },
- {
-   "title": "Club Vistara SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/vistara-prime-front.png",
-   "rating": 4,
-   "id": "LSE48KPV8WS",
-   "description": "id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie",
-   "annualFee": 1743
- },
- {
-   "title": "Club Vistara SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/vistara-prime-front-foinal.png",
-   "rating": 4,
-   "id": "BOV86SRN4YT",
-   "description": "lectus pede, ultrices a, auctor non, feugiat nec, diam. Duis mi enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero",
-   "annualFee": 1386
- },
- {
-   "title": "Doctor's SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Doctor_349x218-px-Front.png",
-   "rating": 3,
-   "id": "EGF29JDG0FE",
-   "description": "nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis",
-   "annualFee": 1033
- },
- {
-   "title": "Doctor's SBI Card (in association with IMA)",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/doctor-ima-card-face.png",
-   "rating": 5,
-   "id": "LFS29DKV5MK",
-   "description": "lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis",
-   "annualFee": 1598
- },
- {
-   "title": "Etihad Guest SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/etihad-bank-front-base.png",
-   "rating": 3,
-   "id": "NJL55HXK1MK",
-   "description": "convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu, placerat eget, venenatis a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque, tellus sem mollis dui, in sodales elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu lacus.",
-   "annualFee": 1234
- },
- {
-   "title": "Etihad Guest SBI Premier Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/etihad-prime-front.png",
-   "rating": 4,
-   "id": "CEO68LJM6UR",
-   "description": "aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac arcu. Nunc mauris. Morbi non sapien molestie orci tincidunt adipiscing. Mauris molestie pharetra nibh. Aliquam ornare, libero at auctor",
-   "annualFee": 1371
- },
- {
-   "title": "Flipkart SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/fipkart-sbi-card/thumb-flipkart-sbi-card-front.png",
-   "rating": 3,
-   "id": "PCP18PSO4XO",
-   "description": "adipiscing, enim mi tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque et nunc. Quisque",
-   "annualFee": 1258
- },
- {
-   "title": "IndiGo SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/indigo-sbi-card-and-elite/SBI-IndiGo-Cards-Base-front.png",
-   "rating": 5,
-   "id": "MPI94GJK6EV",
-   "description": "risus. Duis a mi fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a nunc. In at pede. Cras vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas. Sed pharetra, felis eget varius ultrices, mauris ipsum",
-   "annualFee": 1457
- },
- {
-   "title": "IndiGo SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/indigo-sbi-card-and-elite/SBI-IndiGo-Cards-Elite-front.png",
-   "rating": 5,
-   "id": "SRI72NMO6KR",
-   "description": "Donec est. Nunc ullamcorper, velit in aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus",
-   "annualFee": 1133
- },
- {
-   "title": "IRCTC SBI Card Premier",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/irctc-premiere.png",
-   "rating": 3,
-   "id": "SRF42CFJ7GC",
-   "description": "et malesuada fames ac turpis egestas. Fusce aliquet magna a neque. Nullam ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus.",
-   "annualFee": 1370
- },
- {
-   "title": "IRCTC SBI Platinum Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/irctc-plat-front.png",
-   "rating": 5,
-   "id": "DFQ55PXA5XJ",
-   "description": "aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-   "annualFee": 1983
- },
- {
-   "title": "Karnataka Bank SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Karnataka%20PRIME%20Card%20Front.png",
-   "rating": 3,
-   "id": "YSR05DET1VU",
-   "description": "vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam",
-   "annualFee": 1264
- },
- {
-   "title": "Karnataka Bank SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/KB%20SimplySAVE%20Card%20Front.png",
-   "rating": 4,
-   "id": "BPW57TZB7LV",
-   "description": "facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa non ante bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer",
-   "annualFee": 1927
- },
- {
-   "title": "Karur Vysya Bank - SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/kvb-gold-face.png",
-   "rating": 4,
-   "id": "KKL85YSY7IT",
-   "description": "in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus eu, ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non dui nec urna suscipit",
-   "annualFee": 1049
- },
- {
-   "title": "Karur Vysya Bank - SBI Platinum Credit Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/KVB%20Platinum%20Card%20Front.png",
-   "rating": 4,
-   "id": "USQ69JBI8DQ",
-   "description": "placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec est. Nunc",
-   "annualFee": 1231
- },
- {
-   "title": "KrisFlyer SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/krisflyer-sbi-card/krisflyer-front.png",
-   "rating": 3,
-   "id": "VWA15MMN4VY",
-   "description": "Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla at sem molestie sodales. Mauris blandit enim consequat purus. Maecenas libero est, congue a, aliquet vel, vulputate eu, odio. Phasellus at augue",
-   "annualFee": 1522
- },
- {
-   "title": "KrisFlyer SBI Card Apex",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/krisflyer-sbi-card/krisflyer-apex-front-blank.png",
-   "rating": 4,
-   "id": "QYQ91RPB6JI",
-   "description": "dictum cursus. Nunc mauris elit, dictum eu, eleifend nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus eu, ligula. Aenean",
-   "annualFee": 1532
- },
- {
-   "title": "KVB SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/KVB-ELITE.png",
-   "rating": 4,
-   "id": "JKV47UIK4VB",
-   "description": "Duis mi enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et,",
-   "annualFee": 1596
- },
- {
-   "title": "KVB SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/KVB-PRIME.png",
-   "rating": 4,
-   "id": "FDB42FBJ8VU",
-   "description": "semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida. Praesent eu nulla at",
-   "annualFee": 1668
- },
- {
-   "title": "KVB SBI Signature Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/KVB%20Signature%20Card%20Front.png",
-   "rating": 4,
-   "id": "QMN48BBN1LR",
-   "description": "In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et",
-   "annualFee": 1443
- },
- {
-   "title": "KVB SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/KVB-SimplySAVE.png",
-   "rating": 3,
-   "id": "NAA41MRJ0MR",
-   "description": "Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia. Sed congue, elit sed consequat auctor, nunc nulla vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum feugiat. Sed nec",
-   "annualFee": 1103
- },
- {
-   "title": "Lifestyle Home Centre SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/lc-hc-base-front.png",
-   "rating": 4,
-   "id": "YRB12FMY6UN",
-   "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat nunc sit amet metus. Aliquam erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt",
-   "annualFee": 1891
- },
- {
-   "title": "Lifestyle Home Centre SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/lc-hc-prime-front.png",
-   "rating": 5,
-   "id": "PCN64ZQC7AR",
-   "description": "nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae",
-   "annualFee": 1012
- },
- {
-   "title": "Lifestyle Home Centre SBI Card SELECT",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/lc-hc-select-front.png",
-   "rating": 4,
-   "id": "CGG45CXS7NW",
-   "description": "arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec tincidunt. Donec vitae erat vel pede blandit",
-   "annualFee": 1393
- },
- {
-   "title": "Max SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/max-base.png",
-   "rating": 4,
-   "id": "XIH39OSR7LP",
-   "description": "metus. In nec orci. Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus. Donec egestas. Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor",
-   "annualFee": 1197
- },
- {
-   "title": "Max SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/max-sbi-card-prime.png",
-   "rating": 3,
-   "id": "VOR43ONC4FI",
-   "description": "gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim. Sed nulla ante, iaculis nec, eleifend",
-   "annualFee": 1403
- },
- {
-   "title": "Max SBI Card SELECT",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/max-select.png",
-   "rating": 3,
-   "id": "ZCL76ULF4VS",
-   "description": "Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean",
-   "annualFee": 1329
- },
- {
-   "title": "OLA Money SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/ola-card/ola-card-face-front.png",
-   "rating": 5,
-   "id": "CRW70RUQ7VP",
-   "description": "pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod",
-   "annualFee": 1928
- },
- {
-   "title": "Paytm SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Paytm-SBI-Base-349x218-01.png",
-   "rating": 4,
-   "id": "IXK75QQB6FO",
-   "description": "tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus. Nullam scelerisque neque sed sem egestas blandit. Nam nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat nunc sit amet metus. Aliquam erat volutpat.",
-   "annualFee": 1993
- },
- {
-   "title": "Paytm SBI Card SELECT",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Paytm-SBI-Select_1.png",
-   "rating": 4,
-   "id": "FSK18CSL1EA",
-   "description": "nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit.",
-   "annualFee": 1957
- },
- {
-   "title": "PhonePe SBI Card PURPLE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/phonepe/base/thumb-PhonePe-SBI-Base-f.png",
-   "rating": 4,
-   "id": "HWF73ZHH1EW",
-   "description": "semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus eu, ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus",
-   "annualFee": 1388
- },
- {
-   "title": "PhonePe SBI Card SELECT BLACK",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/phonepe/select/PhonePe-SBI-select-f.png",
-   "rating": 3,
-   "id": "IJS08WRR4HM",
-   "description": "quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec tincidunt. Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae velit egestas lacinia. Sed congue,",
-   "annualFee": 1842
- },
- {
-   "title": "PSB SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/PSB%20ELITE%20Card%20Front.png",
-   "rating": 4,
-   "id": "AKF50NII3ST",
-   "description": "Suspendisse tristique neque venenatis lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim",
-   "annualFee": 1952
- },
- {
-   "title": "PSB SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/PSB%20PRIME%20Card%20Front.png",
-   "rating": 4,
-   "id": "JAL42DIN7BT",
-   "description": "Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus eu, ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae",
-   "annualFee": 1695
- },
- {
-   "title": "PSB SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/PSB%20SimplySAVE%20Card%20Front.png",
-   "rating": 3,
-   "id": "JKT31RVS7DA",
-   "description": "sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis quam a felis ullamcorper viverra. Maecenas iaculis aliquet diam. Sed diam lorem, auctor quis, tristique ac, eleifend vitae, erat. Vivamus nisi. Mauris nulla. Integer urna. Vivamus molestie dapibus ligula. Aliquam erat",
-   "annualFee": 1759
- },
- {
-   "title": "Reliance SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/rel-base.png",
-   "rating": 4,
-   "id": "OUK80KRD7EU",
-   "description": "et libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor vitae, aliquet nec, imperdiet nec, leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim nisl elementum purus, accumsan",
-   "annualFee": 1504
- },
- {
-   "title": "Reliance SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/rel-prime.png",
-   "rating": 5,
-   "id": "FRN30XCQ1LJ",
-   "description": "aliquet lobortis, nisi nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-   "annualFee": 1735
- },
- {
-   "title": "SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-Elite_349x218-px-Front.png",
-   "rating": 3,
-   "id": "BNH06CCV2PN",
-   "description": "felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida",
-   "annualFee": 1081
- },
- {
-   "title": "SBI Card ELITE Advantage",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Elite_349x218-px-Front.png",
-   "rating": 4,
-   "id": "UPD61NTY5KL",
-   "description": "Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie tortor nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque.",
-   "annualFee": 1077
- },
- {
-   "title": "SBI Card MILES",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/MILES_139x218-px-front.png",
-   "rating": 5,
-   "id": "PCO66LIJ4UY",
-   "description": "lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat.",
-   "annualFee": 1817
- },
- {
-   "title": "SBI Card Miles Elite",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/MILES-Elite_139x218-px-Front.png",
-   "rating": 4,
-   "id": "LFC14DAT1MM",
-   "description": "tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam",
-   "annualFee": 1928
- },
- {
-   "title": "SBI Card MILES PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/MILES-Prime_139x218-px-Front.png",
-   "rating": 4,
-   "id": "QEW92NUM6OI",
-   "description": "Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel est tempor bibendum. Donec felis",
-   "annualFee": 1338
- },
- {
-   "title": "SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-Prime_349x218-px-Front.png",
-   "rating": 4,
-   "id": "SHY22XSC6WN",
-   "description": "sodales nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie tortor nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus",
-   "annualFee": 1827
- },
- {
-   "title": "SBI Card PRIME Advantage",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Prime_349x218-px-Front.png",
-   "rating": 4,
-   "id": "GRQ21KXB3RC",
-   "description": "malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis.",
-   "annualFee": 1998
- },
- {
-   "title": "SBI Card PULSE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/240759_SBI_Pulse_349-x-218px-01.png",
-   "rating": 4,
-   "id": "HBZ56WTP9FW",
-   "description": "nunc sit amet metus. Aliquam erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt nibh. Phasellus nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet",
-   "annualFee": 1489
- },
- {
-   "title": "SBI Card Unnati",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UNNATI_349x218-px-front.png",
-   "rating": 3,
-   "id": "BQW44LDB8UU",
-   "description": "amet ornare lectus justo eu arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec, diam. Duis mi enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus et magnis",
-   "annualFee": 1055
- },
- {
-   "title": "Shaurya SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Shaurya2_349x218-px_front.png",
-   "rating": 4,
-   "id": "XFH96EYN6CZ",
-   "description": "Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum",
-   "annualFee": 1814
- },
- {
-   "title": "Shaurya Select SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Shaurya_349x218-px_Front.png",
-   "rating": 4,
-   "id": "POK56AKY6SB",
-   "description": "tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa non ante bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero. Donec consectetuer mauris id",
-   "annualFee": 1294
- },
- {
-   "title": "SimplyCLICK Advantage SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Simplyclick-Advantage_349x218-front.png",
-   "rating": 4,
-   "id": "DFJ44QMS5NW",
-   "description": "dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce",
-   "annualFee": 1434
- },
- {
-   "title": "SimplyCLICK SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Simplyclick_349x218-Front.png",
-   "rating": 3,
-   "id": "EHA14FPC4LY",
-   "description": "Donec nibh. Quisque nonummy ipsum non arcu. Vivamus sit amet risus. Donec egestas. Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla.",
-   "annualFee": 1637
- },
- {
-   "title": "SimplySAVE Advantage SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/SimplySave-Advantage_349x218-px-front.png",
-   "rating": 4,
-   "id": "RGT13XZO5OE",
-   "description": "dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere vulputate, lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui. Fusce diam nunc, ullamcorper eu, euismod ac, fermentum vel, mauris. Integer",
-   "annualFee": 1746
- },
- {
-   "title": "SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-SimplySave_349x218-px-Front.png",
-   "rating": 3,
-   "id": "HPV01DJM2QJ",
-   "description": "mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor vitae, aliquet nec, imperdiet nec, leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim nisl elementum purus, accumsan interdum libero dui",
-   "annualFee": 1965
- },
- {
-   "title": "South Indian Bank SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/South-Indian-Bank-PRIME.png",
-   "rating": 4,
-   "id": "NYL20XPN8DU",
-   "description": "Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida",
-   "annualFee": 1693
- },
- {
-   "title": "South Indian Bank SBI Platinum Credit Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/SIB%20Platinum%20Card%20Front.png",
-   "rating": 4,
-   "id": "RMQ30KDO6SY",
-   "description": "id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus",
-   "annualFee": 1835
- },
- {
-   "title": "South Indian Bank SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/SIB%20SimplySAVE%20Card%20Front.png",
-   "rating": 3,
-   "id": "XTR60XIY9LO",
-   "description": "odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie tortor nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare",
-   "annualFee": 1631
- },
- {
-   "title": "Spar SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/spar-base.png",
-   "rating": 4,
-   "id": "OOL87CKD7SG",
-   "description": "dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam",
-   "annualFee": 1666
- },
- {
-   "title": "Spar SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/SBI-Spar-Prime-01.png",
-   "rating": 4,
-   "id": "HWE31TDY6RC",
-   "description": "convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien. Nunc pulvinar arcu et pede. Nunc sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci.",
-   "annualFee": 1213
- },
- {
-   "title": "Spar SBI Card SELECT",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/SBI-Spar-Select-01.png",
-   "rating": 4,
-   "id": "OQR20QDX2BR",
-   "description": "aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis",
-   "annualFee": 1468
- },
- {
-   "title": "Tata Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-faces/tata-titanium-dec.jpg",
-   "rating": 4,
-   "id": "LBK27EWS1GD",
-   "description": "Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim.",
-   "annualFee": 1397
- },
- {
-   "title": "Tata Card SELECT",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-faces/tata-platinum-dec.jpg",
-   "rating": 3,
-   "id": "SPG75PFN2GO",
-   "description": "elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec",
-   "annualFee": 1962
- },
- {
-   "title": "Tata Neu Infinity SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/lifestyle/tata-neu-infitnity/tata-neu-infinity-face-blank-front.png",
-   "rating": 5,
-   "id": "YRC25XDM7TR",
-   "description": "consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula.",
-   "annualFee": 1722
- },
- {
-   "title": "Tata Neu Plus SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/lifestyle/tata-neu-plus/tata-neu-plus-face-blank-front.png",
-   "rating": 4,
-   "id": "BFT11TVI4WN",
-   "description": "quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie tortor nibh sit amet orci. Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac",
-   "annualFee": 1576
- },
- {
-   "title": "Titan SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Titan-349x218-03.png",
-   "rating": 5,
-   "id": "VON21GXU4LE",
-   "description": "fringilla ornare placerat, orci lacus vestibulum lorem, sit amet ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec",
-   "annualFee": 1027
- },
- {
-   "title": "UCO Bank SBI Card ELITE",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UCO%20ELITE%20Card%20Front.png",
-   "rating": 4,
-   "id": "CFR40CZB6YQ",
-   "description": "libero. Proin sed turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante.",
-   "annualFee": 1229
- },
- {
-   "title": "UCO Bank SBI Card PRIME",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UCO%20PRIME%20Card%20Front.png",
-   "rating": 5,
-   "id": "JMT49IXQ6DB",
-   "description": "sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque et nunc. Quisque ornare tortor at risus. Nunc ac sem ut dolor dapibus gravida. Aliquam tincidunt, nunc ac mattis ornare, lectus ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor",
-   "annualFee": 1215
- },
- {
-   "title": "UCO Bank SimplySAVE SBI Card",
-   "bankLogo": "https://logo.clearbit.com/sbi.co.in",
-   "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UCO%20SimplySAVE%20Card%20Front.png",
-   "rating": 4,
-   "id": "POC99THR4EU",
-   "description": "Curae Phasellus ornare. Fusce mollis. Duis sit amet diam eu dolor egestas rhoncus. Proin nisl sem, consequat nec, mollis vitae, posuere at, velit. Cras lorem lorem, luctus ut, pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per",
-   "annualFee": 1210
- }
+  {
+    "title": "CASHBACK SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-240759_SBI_Cashback_139-x-218px-01.png",
+    "description": "Enjoy up to 5% cashback on your spending, with the rewards automatically credited to your account shortly after your next statement.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "UHP82QUT3KT",
+    "annualFee": 1148
+  },
+  {
+    "title": "Flipkart SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/fipkart-sbi-card/thumb-flipkart-sbi-card-front.png",
+    "description": "Enjoy great rewards like up to 7.5% cashback on popular platforms, a Flipkart gift card, and waivers on your annual fee and fuel surcharges.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/rewards/flipkart-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "YJI74YJV2QV",
+    "annualFee": 1754
+  },
+  {
+    "title": "IndiGo SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/indigo-sbi-card-and-elite/SBI-IndiGo-Cards-Base-front.png",
+    "description": "Enjoy generous benefits with 2500 Indigo Bluchip upon welcome and renewal, plus up to 3% earning on your IndiGo, hotel, and travel expenses.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/indigo-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "OMW03WSE9JL",
+    "annualFee": 1670
+  },
+  {
+    "title": "SimplyCLICK SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Simplyclick_349x218-Front.png",
+    "description": "Enjoy a welcome Amazon gift card, enhanced reward points on online spending, and valuable e-vouchers for meeting annual online spend thresholds.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/simplyclick-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "WEJ93WHM6EQ",
+    "annualFee": 1156
+  },
+  {
+    "title": "Tata Neu Infinity SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/lifestyle/tata-neu-infitnity/tata-neu-infinity-face-blank-front.png",
+    "description": "Enjoy a generous welcome gift, great savings on your Tata Neu and partner brand purchases, plus complimentary domestic lounge visits throughout the year.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/lifestyle/tata-neu-infinity-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "BYQ16KFI7FU",
+    "annualFee": 1319
+  },
+  {
+    "title": "SBI Card Miles Elite",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/MILES-Elite_139x218-px-Front.png",
+    "description": "Enjoy generous travel benefits, including a welcome gift of 5,000 Travel Credits, high earning rates on travel spending, bonus credits for annual spends, and flexible redemption options for flights, hotels, or catalogue products.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/sbi-card-miles-elite.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "RGB68NOK4TI",
+    "annualFee": 1348
+  },
+  {
+    "title": "SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-Elite_349x218-px-Front.png",
+    "description": "Enjoy a welcome e-Gift Voucher, complimentary movie tickets annually, and the opportunity to earn valuable Bonus Reward Points every year!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/lifestyle/sbi-card-elite.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "EEI19CFT0SP",
+    "annualFee": 1105
+  },
+  {
+    "title": "SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-Prime_349x218-px-Front.png",
+    "description": "Enjoy generous benefits including Vouchers worth Rs. 14,000, 10X Reward Points on everyday spending, and complimentary access to airport lounges!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/rewards/sbi-card-prime.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "UOC17RCC3FY",
+    "annualFee": 1804
+  },
+  {
+    "title": "SBI Card PULSE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/240759_SBI_Pulse_349-x-218px-01.png",
+    "description": "Enjoy valuable perks like a Noise Smartwatch, memberships to FITPASS PRO and Netmeds First, 5X Reward Points on select purchases, and an annual E-Voucher worth Rs.1,500!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/lifestyle/sbi-card-pulse.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "XRE14WZH2HM",
+    "annualFee": 1865
+  },
+  {
+    "title": "Tata Neu Plus SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/lifestyle/tata-neu-plus/tata-neu-plus-face-blank-front.png",
+    "description": "Enjoy a welcome gift of 499 NeuCoins, earn up to 2% back as NeuCoins on spending, and receive complimentary domestic lounge access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/lifestyle/tata-neu-plus-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "TPS28YSS4XN",
+    "annualFee": 1749
+  },
+  {
+    "title": "Doctor's SBI Card (in association with IMA)",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/doctor-ima-card-face.png",
+    "description": "Enjoy substantial coverage, valuable e-Gift Vouchers upon joining and annual spending milestones, and accelerated Reward Points on specific purchases.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "OSV77JST6SY",
+    "annualFee": 1893
+  },
+  {
+    "title": "SBI Card ELITE Advantage",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Elite_349x218-px-Front.png",
+    "description": "Enjoy great perks including a welcome e-gift voucher, complimentary movie tickets, and valuable bonus reward points every year.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "YXX83DTK5CF",
+    "annualFee": 1501
+  },
+  {
+    "title": "Doctor's SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Doctor_349x218-px-Front.png",
+    "description": "Enjoy significant perks like Professional Indemnity Insurance, a joining e-Gift Voucher, 5X Reward Points on specific spending categories, and an annual e-Gift Voucher for meeting spending goals.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "IUA58RYU5OW",
+    "annualFee": 1183
+  },
+  {
+    "title": "PhonePe SBI Card SELECT BLACK",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/phonepe/select/PhonePe-SBI-select-f.png",
+    "description": "Enjoy a generous welcome gift, earn substantial reward points on your spending, and have your renewal fee reversed by reaching the spend goal.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "LZV66GZE6DX",
+    "annualFee": 1850
+  },
+  {
+    "title": "PhonePe SBI Card PURPLE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/phonepe/base/thumb-PhonePe-SBI-Base-f.png",
+    "description": "Enjoy a Rs. 500 PhonePe Gift card as a welcome gift, plus earn valuable Reward Points on every Rs. 100 spent on PhonePe, Pincode, and other online purchases!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "OYI63NMK4QW",
+    "annualFee": 1009
+  },
+  {
+    "title": "OLA Money SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/ola-card/ola-card-face-front.png",
+    "description": "Enjoy generous cash back rewards on all your spending, including 7% back on Ola rides, plus pay no annual fee for the first year!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/ola-money-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "LSE48KPV8WS",
+    "annualFee": 1743
+  },
+  {
+    "title": "Apollo SBI Card SELECT",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/apollo-sbi-card-select/thumb-apollo-cardface-front.png",
+    "description": "Enjoy a welcome e-Gift, Apollo Circle Benefits, a 10% value back on Apollo 24|7 purchases, and a complimentary FITPASS PRO Membership upon activation.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/rewards/apollo-sbi-card-select.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "BOV86SRN4YT",
+    "annualFee": 1386
+  },
+  {
+    "title": "Apollo SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-flip/sbi-platinum-card.png",
+    "description": "Enjoy a warm welcome with 500 Reward Points, complimentary OneApollo Gold Tier Membership, up to 10% instant discounts, and triple Reward Points on Apollo services.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "EGF29JDG0FE",
+    "annualFee": 1033
+  },
+  {
+    "title": "SBI Card PRIME Advantage",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Prime_349x218-px-Front.png",
+    "description": "Enjoy generous rewards including e-Gift Vouchers worth Rs. 14,000, high reward points on popular spending categories, and complimentary airport lounge access to enhance your lifestyle and travel experience.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "LFS29DKV5MK",
+    "annualFee": 1598
+  },
+  {
+    "title": "Tata Card SELECT",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-faces/tata-platinum-dec.jpg",
+    "description": "Enjoy generous gift vouchers, extra reward points on everyday spending, and up to 5% value back to enhance your shopping experience!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "NJL55HXK1MK",
+    "annualFee": 1234
+  },
+  {
+    "title": "Tata Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/card-faces/tata-titanium-dec.jpg",
+    "description": "Enjoy a generous welcome bonus and significant value back on your spending at Tata Outlets, Croma, and grocery/department stores.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "CEO68LJM6UR",
+    "annualFee": 1371
+  },
+  {
+    "title": "Paytm SBI Card SELECT",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Paytm-SBI-Select_1.png",
+    "description": "Enjoy generous rewards, including complimentary membership, reward points, and cashback up to 5% on your Paytm spending and other purchases.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/paytm-sbi-card-select.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "PCP18PSO4XO",
+    "annualFee": 1258
+  },
+  {
+    "title": "Paytm SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Paytm-SBI-Base-349x218-01.png",
+    "description": "Enjoy complimentary Paytm First Membership and earn up to 3% cashback on your Paytm travel and app purchases, plus 1% cashback on other spends.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/paytm-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "MPI94GJK6EV",
+    "annualFee": 1457
+  },
+  {
+    "title": "Landmark Rewards SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/value-savings/landmark/landmark-prime/Landmark-Prime-139x218-front.png",
+    "description": "Enjoy generous rewards, starting with Rs. 3,000 worth of points upon fee payment, and continue earning high reward points on shopping, dining, movies, and international spends, with a bonus for reaching high annual spending.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/landmark-prime-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "SRI72NMO6KR",
+    "annualFee": 1133
+  },
+  {
+    "title": "Landmark Rewards SBI Card SELECT",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/value-savings/landmark/landmark-select/Landmark-Select-front.png",
+    "description": "You can enjoy excellent rewards, including 6,000 bonus points worth Rs. 1,500 annually and high earning rates of up to 15 Reward Points per Rs. 100 on various shopping, dining, and entertainment expenses.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/landmark-select-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "SRF42CFJ7GC",
+    "annualFee": 1370
+  },
+  {
+    "title": "Landmark Rewards SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/value-savings/landmark/landmark-base/Landmark-Base-139x218-front.png",
+    "description": "Enjoy great value and earn reward points quickly across your favorite stores, dining, movies, and international spending, with a bonus for meeting your annual spending milestone.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/landmark-base-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "DFQ55PXA5XJ",
+    "annualFee": 1983
+  },
+  {
+    "title": "Titan SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Titan-349x218-03.png",
+    "description": "Enjoy a generous 12000 Reward Points welcome gift and earn significant value back or cashback on your quarterly purchases across a variety of popular brands.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/titan-sbi-card1.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "YSR05DET1VU",
+    "annualFee": 1264
+  },
+  {
+    "title": "Reliance SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/rel-base.png",
+    "description": "Enjoy up to Rs 500 in Reliance Retail Vouchers and a Bouquet of Reliance Discount Vouchers up to Rs 3200, plus the chance for annual spend reversals, just for using your card.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/reliance-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "BPW57TZB7LV",
+    "annualFee": 1927
+  },
+  {
+    "title": "Reliance SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/rel-prime.png",
+    "description": "Enjoy generous welcome gifts, additional discount vouchers, annual spending vouchers, and rewarding points for your purchases at Reliance Retail Stores.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/reliance-premium-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "KKL85YSY7IT",
+    "annualFee": 1049
+  },
+  {
+    "title": "SBI Card Unnati",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UNNATI_349x218-px-front.png",
+    "description": "Enjoy four years free, earn rewards on your spending, and get cashback and fuel savings when you use your SBI Card Unnati.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "USQ69JBI8DQ",
+    "annualFee": 1231
+  },
+  {
+    "title": "SimplyCLICK Advantage SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Simplyclick-Advantage_349x218-front.png",
+    "description": "Enjoy a welcome gift card, multiplied reward points on online spending, and valuable e-vouchers based on your annual online spends.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "VWA15MMN4VY",
+    "annualFee": 1522
+  },
+  {
+    "title": "SimplySAVE Advantage SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/SimplySave-Advantage_349x218-px-front.png",
+    "description": "Enjoy excellent rewards on everyday spending categories like dining and groceries, along with helpful annual fee and fuel surcharge waivers.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "QYQ91RPB6JI",
+    "annualFee": 1532
+  },
+  {
+    "title": "Shaurya SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Shaurya2_349x218-px_front.png",
+    "description": "Enjoy multiplied reward points on everyday spending, save on your annual fee with qualifying yearly purchases, and benefit from fuel surcharge waivers nationwide.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "JKV47UIK4VB",
+    "annualFee": 1596
+  },
+  {
+    "title": "Shaurya Select SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Shaurya_349x218-px_Front.png",
+    "description": "Enjoy a free first year and maximize your spending with 10 Reward Points on every Rs. 100 spent in key categories, plus receive a Rs. 7,000 e-Gift Voucher when you reach Rs. 5 Lakhs in annual spending.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "FDB42FBJ8VU",
+    "annualFee": 1668
+  },
+  {
+    "title": "SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/thumb-SimplySave_349x218-px-Front.png",
+    "description": "Enjoy generous rewards on everyday spending, a welcome bonus, and fee waivers to maximize your savings.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/shopping/simplysave-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "QMN48BBN1LR",
+    "annualFee": 1443
+  },
+  {
+    "title": "IndiGo SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/indigo-sbi-card-and-elite/SBI-IndiGo-Cards-Elite-front.png",
+    "description": "Enjoy generous welcome rewards and significant savings on IndiGo spending, fuel, and foreign transactions.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/indigo-sbi-card-elite.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "NAA41MRJ0MR",
+    "annualFee": 1103
+  },
+  {
+    "title": "KrisFlyer SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/krisflyer-sbi-card/krisflyer-front.png",
+    "description": "Enjoy 3000 Krisflyer Welcome Miles, accelerated miles on your travel and international spending, and four complimentary domestic lounge benefits annually.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/krisflyer-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "YRB12FMY6UN",
+    "annualFee": 1891
+  },
+  {
+    "title": "KrisFlyer SBI Card Apex",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/travel/krisflyer-sbi-card/krisflyer-apex-front-blank.png",
+    "description": "Enjoy a generous welcome gift of 10,000 KrisFlyer Miles, plus earn up to 10 miles per Rs 200 spent on SIA Group, and continue earning miles on all your other eligible purchases.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/krisflyer-sbi-card-apex.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "PCN64ZQC7AR",
+    "annualFee": 1012
+  },
+  {
+    "title": "SBI Card MILES PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/MILES-Prime_139x218-px-Front.png",
+    "description": "Enjoy a generous welcome gift of 3,000 Travel Credits, earn up to 4 Travel Credits per Rs.200 spent on travel, and unlock 10,000 bonus credits annually, all convertible into air miles, hotel points, or travel bookings.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/sbi-card-miles-prime.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "CGG45CXS7NW",
+    "annualFee": 1393
+  },
+  {
+    "title": "SBI Card MILES",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/MILES_139x218-px-front.png",
+    "description": "Enjoy generous travel benefits, including a welcome gift, easy earning on travel spends, bonus credits for annual spending, and flexible redemption options like Air Miles, Hotel Points, or travel bookings.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/sbi-card-miles.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "XIH39OSR7LP",
+    "annualFee": 1197
+  },
+  {
+    "title": "BPCL SBI Card OCTANE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/octane-front.png",
+    "description": "Enjoy generous rewards on everyday spending, including up to 25X points on fuel and complimentary airport lounge access!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/fuel/bpcl-sbi-card-octane.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "VOR43ONC4FI",
+    "annualFee": 1403
+  },
+  {
+    "title": "IRCTC SBI Card Premier",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/irctc-premiere.png",
+    "description": "Enjoy significant savings and rewards on railway travel, including welcome and milestone benefits, and waived transaction charges.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/irctc-premier-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "ZCL76ULF4VS",
+    "annualFee": 1329
+  },
+  {
+    "title": "Etihad Guest SBI Premier Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/etihad-prime-front.png",
+    "description": "Enjoy a welcome gift of 5,000 Etihad Guest Miles, instant Gold Tier Status, 3X miles on Etihad spending, and up to 6,000 annual bonus miles through your spending!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "CRW70RUQ7VP",
+    "annualFee": 1928
+  },
+  {
+    "title": "Etihad Guest SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/etihad-bank-front-base.png",
+    "description": "You can earn thousands of Etihad Guest Miles, achieve complimentary Silver Tier Status, and enjoy triple miles on all Etihad spending.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "IXK75QQB6FO",
+    "annualFee": 1993
+  },
+  {
+    "title": "BPCL SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bpcl-plat.png",
+    "description": "Enjoy a welcome bonus and significantly higher reward points on your fuel, grocery, department store, movie, and dining expenses!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/fuel/bpcl-sbi-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "FSK18CSL1EA",
+    "annualFee": 1957
+  },
+  {
+    "title": "Club Vistara SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/vistara-prime-front-foinal.png",
+    "description": "Enjoy premium travel and exclusive membership perks, plus bonus vouchers, simply by using this card.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "HWF73ZHH1EW",
+    "annualFee": 1388
+  },
+  {
+    "title": "Club Vistara SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/vistara-prime-front.png",
+    "description": "Enjoy great travel perks like a welcome Economy ticket voucher, earning more vouchers including a hotel stay upon spending milestones, and flexibility with up to four free flight cancellations.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "IJS08WRR4HM",
+    "annualFee": 1842
+  },
+  {
+    "title": "Air India SBI Signature Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Air-India-Signature-SBI-Card-349x218-02.png",
+    "description": "You can earn substantial rewards, including a large welcome bonus, annual points, up to 10 points per Rs. 100 spent on Air India tickets, and up to 1,00,000 bonus points annually based on your spending.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "AKF50NII3ST",
+    "annualFee": 1952
+  },
+  {
+    "title": "Air India SBI Platinum Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Air-India-Platinum-front.png",
+    "description": "Enjoy a generous welcome gift of 5,000 Reward Points, annual gifts, ongoing points for Air India spending, and the potential for up to 15,000 bonus points annually based on your spending.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "JAL42DIN7BT",
+    "annualFee": 1695
+  },
+  {
+    "title": "IRCTC SBI Platinum Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/irctc-plat-front.png",
+    "description": "Enjoy significant savings and value back on your railway ticket purchases, plus receive bonus points and transaction waivers for added convenience.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/travel/irctc-sbi-platinum-card.dcr",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "JKT31RVS7DA",
+    "annualFee": 1759
+  },
+  {
+    "title": "Bank of Maharashtra SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/bom-cards/bom-elite-face.png",
+    "description": "Enjoy over Rs. 23,500 in annual value, including a welcome e-Gift Voucher, free movie tickets, bonus rewards, and a complimentary Priority Pass membership!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "OUK80KRD7EU",
+    "annualFee": 1504
+  },
+  {
+    "title": "Bank of Maharashtra SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/bom-cards/bom-save-face.png",
+    "description": "Enjoy great savings and rewards on dining, movies, shopping, and fuel with bonus points and waived annual fees based on your spending.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "FRN30XCQ1LJ",
+    "annualFee": 1735
+  },
+  {
+    "title": "Bank of Maharashtra SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/bom-cards/bom-prime-face.png",
+    "description": "Enjoy significant value with up to Rs. 14,000 in gift vouchers, earn great rewards on everyday spending, and relax with complimentary airport lounge access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "BNH06CCV2PN",
+    "annualFee": 1081
+  },
+  {
+    "title": "PSB SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/PSB%20ELITE%20Card%20Front.png",
+    "description": "Enjoy a generous welcome gift, annual movie tickets, valuable bonus reward points, and a complimentary Priority Pass membership every year.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "UPD61NTY5KL",
+    "annualFee": 1077
+  },
+  {
+    "title": "PSB SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/PSB%20PRIME%20Card%20Front.png",
+    "description": "Enjoy generous rewards from joining bonuses and gift vouchers to 10 points per Rs. 100 on everyday purchases, plus complimentary international and domestic airport lounge access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 5,
+    "id": "PCO66LIJ4UY",
+    "annualFee": 1817
+  },
+  {
+    "title": "PSB SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/PSB%20SimplySAVE%20Card%20Front.png",
+    "description": "Enjoy rewards on everyday spending like dining and movies, a bonus on initial spends, and savings on annual fees and fuel.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "LFC14DAT1MM",
+    "annualFee": 1928
+  },
+  {
+    "title": "UCO Bank SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UCO%20ELITE%20Card%20Front.png",
+    "description": "Enjoy a range of valuable perks, including gift vouchers, free movie tickets, bonus reward points, and a complimentary Priority Pass membership, adding up to significant annual savings and exclusive access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "QEW92NUM6OI",
+    "annualFee": 1338
+  },
+  {
+    "title": "UCO Bank SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UCO%20PRIME%20Card%20Front.png",
+    "description": "Enjoy amazing value with gift vouchers worth Rs. 14,000, earn 10 Reward Points on everyday spending, and relax with complimentary airport lounge access worldwide.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "SHY22XSC6WN",
+    "annualFee": 1827
+  },
+  {
+    "title": "UCO Bank SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/UCO%20SimplySAVE%20Card%20Front.png",
+    "description": "Enjoy generous rewards, including bonus points and high earning rates on dining and groceries, with the potential for annual fee reversal and a fuel surcharge waiver.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "GRQ21KXB3RC",
+    "annualFee": 1998
+  },
+  {
+    "title": "Central Bank of India SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CBI%20ELITE%20Card%20Front.png",
+    "description": "Enjoy a generous welcome gift, annual movie tickets, valuable bonus reward points, and exclusive Priority Pass access that adds up to great value every year.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "HBZ56WTP9FW",
+    "annualFee": 1489
+  },
+  {
+    "title": "Central Bank of India SBI Card Prime",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CBI%20PRIME%20Card%20Front.png",
+    "description": "Enjoy up to Rs. 14,000 in gift vouchers, earn great rewards on common spending, and travel in comfort with complimentary airport lounge access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "BQW44LDB8UU",
+    "annualFee": 1055
+  },
+  {
+    "title": "Central Bank Of India SimplySave SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CBI%20SimplySAVE%20Card%20Front.png",
+    "description": "Enjoy 2,000 bonus points, earn up to 10 Reward Points per Rs. 150 on common spending categories, get your annual fee reversed, and save with a 1% fuel surcharge waiver.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "XFH96EYN6CZ",
+    "annualFee": 1814
+  },
+  {
+    "title": "City Union Bank SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CUB%20PRIME%20Card%20Front.png",
+    "description": "Enjoy generous gift vouchers, high reward points on your everyday spending, and complimentary access to airport lounges both internationally and domestically!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "POK56AKY6SB",
+    "annualFee": 1294
+  },
+  {
+    "title": "City Union Bank SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/CUB%20SimplySAVE%20Card%20Front.png",
+    "description": "You can earn bonus points, high reward points on popular spending categories, qualify for an annual fee reversal, and enjoy a fuel surcharge waiver.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "DFJ44QMS5NW",
+    "annualFee": 1434
+  },
+  {
+    "title": "Karnataka Bank SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/Karnataka%20PRIME%20Card%20Front.png",
+    "description": "Enjoy significant value from joining, gift vouchers, excellent rewards on daily spending, and relaxing airport lounge access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "EHA14FPC4LY",
+    "annualFee": 1637
+  },
+  {
+    "title": "Karnataka Bank SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/KB%20SimplySAVE%20Card%20Front.png",
+    "description": "Enjoy a welcome bonus, high rewards on everyday spending like dining and groceries, and savings through fee waivers and reversals.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "RGT13XZO5OE",
+    "annualFee": 1746
+  },
+  {
+    "title": "South Indian Bank SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/South-Indian-Bank-PRIME.png",
+    "description": "Enjoy generous rewards including up to Rs. 14,000 in gift vouchers, great reward points on common purchases, and complimentary airport lounge access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "HPV01DJM2QJ",
+    "annualFee": 1965
+  },
+  {
+    "title": "South Indian Bank SBI Platinum Credit Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/SIB%20Platinum%20Card%20Front.png",
+    "description": "Enjoy generous gift vouchers totaling Rs. 12,000 and 5X reward points on dining, departmental store, and international spending!",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "NYL20XPN8DU",
+    "annualFee": 1693
+  },
+  {
+    "title": "South Indian Bank SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/SIB%20SimplySAVE%20Card%20Front.png",
+    "description": "Enjoy generous bonus points, high rewards on everyday spending categories like dining and movies, and the potential to waive your annual fees, plus a 1% fuel surcharge waiver.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "RMQ30KDO6SY",
+    "annualFee": 1835
+  },
+  {
+    "title": "KVB SBI Card ELITE",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/KVB-ELITE.png",
+    "description": "Enjoy fantastic perks including an e-Gift Voucher upon joining, free movie tickets every year, valuable bonus reward points, and complimentary Priority Pass access.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "XTR60XIY9LO",
+    "annualFee": 1631
+  },
+  {
+    "title": "KVB SBI Card PRIME",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/KVB-PRIME.png",
+    "description": "Enjoy generous gift vouchers, high reward points on popular purchases, and free access to airport lounges both internationally and domestically.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "OOL87CKD7SG",
+    "annualFee": 1666
+  },
+  {
+    "title": "KVB SimplySAVE SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/banking-partnership/kvb-faces/KVB-SimplySAVE.png",
+    "description": "You can earn thousands of bonus points and ongoing rewards on your everyday spending, plus save money with an annual fee reversal and a fuel surcharge waiver.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "HWE31TDY6RC",
+    "annualFee": 1213
+  },
+  {
+    "title": "KVB SBI Signature Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/KVB%20Signature%20Card%20Front.png",
+    "description": "Enjoy great perks including a welcome gift voucher, monthly movie discounts, bonus reward points, and 24/7 concierge service for enhanced convenience and savings.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "OQR20QDX2BR",
+    "annualFee": 1468
+  },
+  {
+    "title": "Karur Vysya Bank - SBI Platinum Credit Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/bank/KVB%20Platinum%20Card%20Front.png",
+    "description": "Enjoy generous rewards including up to Rs. 12,000 in gift vouchers and 5X reward points on dining, departmental store, and international spends.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 4,
+    "id": "LBK27EWS1GD",
+    "annualFee": 1397
+  },
+  {
+    "title": "Karur Vysya Bank - SBI Card",
+    "cardImage": "https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/network-card-images/kvb-gold-face.png",
+    "description": "Enjoy up to 2,000 bonus reward points and annual fee reversal, plus a 1.7% value back on grocery and departmental store spends.",
+    "applyLink": "https://www.sbicard.com/en/eapply/eapplyform.page?path=personal/credit-cards/",
+    "bankLogo": "https://logo.clearbit.com/sbi.co.in",
+    "rating": 3,
+    "id": "SPG75PFN2GO",
+    "annualFee": 1962
+  }
 ]
 function CardPage() {
   return (
